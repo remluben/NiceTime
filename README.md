@@ -106,3 +106,24 @@ This is essential, as we want to get formats as *1 day ago*, but also *2 days ag
     // bad formatting as we missed the slash when configuring the periods above
     $nt->format($date); // => 2 week ago 
 ```
+
+##Method chaining
+
+As described within the section *customizing* above, there exists a lot of
+methods to customize a NiceTime object's behaviour.
+
+Method chaining allows you to do this in a nice and clean way:
+
+```php
+    $nicetime = new NiceTime();
+    // some funny customizing here - use method chaining
+    $nicetime->setBadDateLabel('wtf')
+             ->setNoDateLabel('lol this is no date')
+             ->setFutureTense('%s from now - what else?')
+             ->setPastTense('%s ago... puh');
+    // now some output
+    // 2 hours ago... puh
+    echo $nicetime->format(date('Y-m-d H:i:s', time() - (2 * 60 * 60)));
+    // 1 day from now - what else?
+    echo $nicetime->format(date('Y-m-d H:i:s', time() + (24 * 60 * 60)));
+```
