@@ -1,6 +1,6 @@
 #NiceTime
 
-A simple class for created formatted output of time periods in facebook style.
+A simple class for creating formatted output of time periods in facebook style.
 
 It is based on a simple function from one of the comments on the php.net PHP manual for the php time() function:
 http://php.net/manual/en/function.time.php#89415
