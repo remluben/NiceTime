@@ -4,6 +4,7 @@
  * @see https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
  * @package Remluben/DateFormat
  * @author Benjamin Ulmer
+ * @copyright GPL-3.0
  * @link https://github.com/remluben/NiceTime
  */
 
