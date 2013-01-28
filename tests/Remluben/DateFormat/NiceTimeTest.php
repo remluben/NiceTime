@@ -1,7 +1,6 @@
 <?php
 
-
-require_once dirname(dirname(realpath(__FILE__))) . '/NiceTime.php';
+require_once dirname(dirname(dirname(dirname(realpath(__FILE__))))) . '/bootstrap.php';
 
 /**
  * Test class for NiceTime.
@@ -16,11 +15,11 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->_object = new NiceTime();
+        $this->_object = new \Remluben\DateFormat\NiceTime();
     }
 
     /**
-     * @covers NiceTime::format
+     * @covers \Remluben\DateFormat\NiceTime::format
      * @dataProvider provider
      */
     public function testFormat($expected, $parameter)
@@ -74,7 +73,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::getBadDateLabel
+     * @covers \Remluben\DateFormat\NiceTime::getBadDateLabel
      */
     public function testGetBadDateLabel()
     {
@@ -82,7 +81,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::getNoDateLabel
+     * @covers \Remluben\DateFormat\NiceTime::getNoDateLabel
      */
     public function testGetNoDateLabel()
     {
@@ -91,7 +90,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::getFutureTense
+     * @covers \Remluben\DateFormat\NiceTime::getFutureTense
      */
     public function testGetFutureTense()
     {
@@ -99,7 +98,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::getPastTense
+     * @covers \Remluben\DateFormat\NiceTime::getPastTense
      */
     public function testGetPastTense()
     {
@@ -107,7 +106,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::getPeriods
+     * @covers \Remluben\DateFormat\NiceTime::getPeriods
      */
     public function testGetPeriods()
     {
@@ -115,7 +114,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::getPeriods
+     * @covers \Remluben\DateFormat\NiceTime::getPeriods
      */
     public function testGetPeriodsSize()
     {
@@ -123,7 +122,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::setBadDateLabel
+     * @covers \Remluben\DateFormat\NiceTime::setBadDateLabel
      */
     public function testSetBadDateLabel()
     {
@@ -133,7 +132,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::setNoDateLabel
+     * @covers \Remluben\DateFormat\NiceTime::setNoDateLabel
      */
     public function testSetNoDateLabel()
     {
@@ -143,7 +142,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::setFutureTense
+     * @covers \Remluben\DateFormat\NiceTime::setFutureTense
      */
     public function testSetFutureTense()
     {
@@ -153,7 +152,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::setPastTense
+     * @covers \Remluben\DateFormat\NiceTime::setPastTense
      */
     public function testSetPastTense()
     {
@@ -163,7 +162,7 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::setPeriods
+     * @covers \Remluben\DateFormat\NiceTime::setPeriods
      */
     public function testSetPeriods()
     {
@@ -174,8 +173,8 @@ class NiceTimeTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers NiceTime::setPeriods
-     * @expectedException InvalidArgumentException
+     * @covers \Remluben\DateFormat\NiceTime::setPeriods
+     * @expectedException \Remluben\DateFormat\InvalidArgumentException
      */
     public function testSetPeriodsException()
     {

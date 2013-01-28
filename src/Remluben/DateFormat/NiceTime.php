@@ -1,5 +1,7 @@
 <?php
 
+namespace Remluben\DateFormat;
+
 /**
  * This class provides functionality to output formatted time periods for
  * future and past dates in facebook style.
@@ -10,7 +12,7 @@
  * function:
  * @see http://php.net/manual/en/function.time.php#89415
  *
- * @package NiceTime
+ * @package Remluben/DateFormat
  * @author Benjamin Ulmer
  * @link https://github.com/remluben/NiceTime
  */
@@ -121,7 +123,7 @@ class NiceTime
 
     /**
      * @param string $noDateLabel
-     * @return NiceTime
+     * @return Remluben\DateFormat\NiceTime
      */
     public function setBadDateLabel($badDateLabel)
     {
@@ -131,7 +133,7 @@ class NiceTime
 
     /**
      * @param string $noDateLabel
-     * @return NiceTime
+     * @return Remluben\DateFormat\NiceTime
      */
     public function setNoDateLabel($noDateLabel)
     {
@@ -141,7 +143,7 @@ class NiceTime
 
     /**
      * @param string $futureTense
-     * @return NiceTime
+     * @return Remluben\DateFormat\NiceTime
      */
     public function setFutureTense($futureTense)
     {
@@ -151,7 +153,7 @@ class NiceTime
 
     /**
      * @param string $pastTense
-     * @return NiceTime
+     * @return Remluben\DateFormat\NiceTime
      */
     public function setPastTense($pastTense)
     {
@@ -161,7 +163,7 @@ class NiceTime
 
 
     /**
-     * @throws IllegalArgumentException
+     * @throws Remluben\DateFormat\InvalidArgumentException
      *         for invalid $periods parameter
      * @param array $periods
      *        specify 8 string for
@@ -173,7 +175,7 @@ class NiceTime
      *        * month
      *        * year
      *        * decade
-     * @return NiceTime
+     * @return Remluben\DateFormat\NiceTime
      */
     public function setPeriods($periods)
     {
