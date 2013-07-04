@@ -2,7 +2,7 @@
     "name": "remluben/nice-time",
     "description": "A simple class for creating formatted output of time periods in facebook style",
     "keywords": ["date","time"],
-    "license" : "GPL-3.0",
+    "license": "MIT",
     "homepage": "http://github.com/remluben/NiceTime",
     "authors": [
         {
